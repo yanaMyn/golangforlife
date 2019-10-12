@@ -1,6 +1,12 @@
 package main
 
 import (
+	"class-golang/golangforlife/Introduction/adhy"
+	"class-golang/golangforlife/Introduction/cetak"
+	"class-golang/golangforlife/Introduction/handler"
+	"class-golang/golangforlife/Introduction/indra"
+	"class-golang/golangforlife/Introduction/pointer"
+	"class-golang/golangforlife/Introduction/yana"
 	"fmt"
 )
 
@@ -9,28 +15,25 @@ func main() {
 	var x int = 7
 	var y string = "tujuh"
 
-	cetak(x, y)
+	cetak.Cetak(x, y)
 
 	var b string
 
-	b = indra("ada dana", "ada calon")
+	b = indra.Indra("ada dana", "ada calon")
 
 	fmt.Printf("hasilnya %s \n", b)
 
-}
+	_, z := adhy.Adhy()
 
-func cetak(x int, y string) {
-	fmt.Printf("print %d %s \n", x, y)
-}
+	fmt.Printf("adalah: %s \n", z)
 
-func indra(x string, y string) string {
-	var a string
+	p := yana.Yana(1, 4, 6)
+	fmt.Printf("rata-rata : %f \n", p)
 
-	if x == "ada dana" && y == "ada calon" {
-		a = "nikah"
-	} else {
-		a = "gagal nikah"
-	}
+	pointer.Pointer()
 
-	return a
+	person := handler.Create()
+
+	handler.Edit(person)
+
 }
