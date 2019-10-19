@@ -8,9 +8,8 @@ import (
 func Create() *model.Person {
 
 	person := &model.Person{}
-	dream := &model.Dream{}
 
-	dream = &model.Dream{
+	dream := &model.Dream{
 		Type:        "wet",
 		Description: "banana",
 	}
@@ -21,14 +20,14 @@ func Create() *model.Person {
 	person.Name = "yana"
 	person.Dream = *dream
 
-	fmt.Printf(" \n\n\n model created %v", *person)
+	fmt.Printf("model created %v\n", *person)
 
 	return person
 
 }
 
 func Edit(person *model.Person) {
-	fmt.Printf("\n\n before edit %v \n\n", *person)
+	fmt.Printf("before edit %v", *person)
 
 	personNew := &model.Person{}
 
@@ -40,6 +39,6 @@ func Edit(person *model.Person) {
 		Dream:   person.Dream,
 	}
 
-	fmt.Printf("\n\n after edit %v \n\n", *personNew)
+	fmt.Printf("\nafter edit %v\n", *personNew)
 
 }
